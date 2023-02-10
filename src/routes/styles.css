@@ -1,0 +1,180 @@
+@font-face {
+	font-family: 'Beth Ellen';
+	src: url('./fonts/Beth-Ellen-2.0.otf');
+}
+@font-face {
+	font-family: 'Linux Libertine';
+	src: url('./fonts/LinLibertine_R.otf');
+}
+
+/* Box-Sizing Rule */
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+/* Remove Default Margin and Padding */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+/* Remove Default List styling */
+
+ul,
+ol {
+	list-style: none;
+}
+
+/* Customizing Links */
+
+a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+/* Making Images Responsive */
+
+img,
+picture {
+	max-width: 100%;
+	display: block;
+	user-select: none;
+	height: auto;
+}
+
+/* Setting the font for form elements */
+
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+/* Adding smooth scrolling */
+
+html:focus-within {
+	scroll-behavior: smooth;
+}
+
+/* Making Focus States a little bit cooler */
+
+@media (prefers-reduced-motion: no-preference) {
+	:focus {
+		transition: outline-offset 0.25s ease;
+	}
+	:focus:not(:active) {
+		outline-offset: 5px;
+	}
+}
+
+/* prefers-reduced-motion */
+
+@media (prefers-reduced-motion: reduce) {
+	html:focus-within {
+		scroll-behavior: auto;
+	}
+	*,
+	*::before,
+	*::after {
+		animation-duration: 0.01ms !important;
+		animation-iteration-count: 1 !important;
+		transition-duration: 0.01ms !important;
+		scroll-behavior: auto !important;
+	}
+}
+
+/* Styling the body */
+
+body {
+	min-height: 100vh;
+	text-rendering: optimizeSpeed;
+	line-height: 1.5;
+}
+
+:root {
+	--clr-white: #e6e6e6;
+	--clr-black: #262626;
+	--clr-grey: #464646;
+
+	--fz-xs: clamp(1rem, calc(0.87rem + 0.65vw), 1.38rem);
+	--fz-s: clamp(1.2rem, calc(1.02rem + 0.9vw), 1.72rem);
+	--fz-m: clamp(1.44rem, calc(1.19rem + 1.23vw), 2.15rem);
+	--fz-l: clamp(1.73rem, calc(1.4rem + 1.67vw), 2.69rem);
+	--fz-xl: clamp(2.07rem, calc(1.63rem + 2.23vw), 3.36rem);
+
+	--space-2xs: clamp(0.25rem, calc(0.21rem + 0.22vw), 0.38rem);
+	--space-xs: clamp(0.75rem, calc(0.64rem + 0.54vw), 1.06rem);
+	--space-s: clamp(1.25rem, calc(1.08rem + 0.87vw), 1.75rem);
+	--space-m: clamp(1.88rem, calc(1.61rem + 1.3vw), 2.63rem);
+	--space-l: clamp(2.5rem, calc(2.15rem + 1.74vw), 3.5rem);
+	--space-xl: clamp(3.75rem, calc(3.23rem + 2.61vw), 5.25rem);
+	--space-2xl: clamp(5rem, calc(4.3rem + 3.48vw), 7rem);
+
+	--BethEllen: 'Beth Ellen', serif;
+	--LinuxLibertine: 'Linux Libertine', serif;
+}
+
+body {
+	background: var(--clr-white);
+	color: var(--clr-black);
+	padding: var(--space-s);
+}
+
+* {
+	font-family: var(--LinuxLibertine);
+}
+
+h1,
+h2,
+h3 {
+	font-family: var(--BethEllen);
+}
+
+h1 {
+	font-size: var(--fz-xl);
+	max-width: 50rem;
+}
+
+button {
+	padding: var(--space-2xs) var(--space-s);
+	margin-block: var(--space-xs);
+	background: var(--clr-black);
+	color: var(--clr-white);
+
+	border-radius: var(--space-2xs);
+	border: 0;
+
+	font-size: var(--fz-xs);
+}
+
+a {
+	text-decoration: none;
+}
+
+input {
+	padding: var(--space-2xs) var(--space-s);
+	margin-block: var(--space-xs);
+	background: var(--clr-grey);
+	color: var(--clr-white);
+	border-radius: var(--space-2xs);
+	font-size: var(--fz-xs);
+
+	outline: none;
+	border: none;
+
+	width: 100%;
+}
+
+body::-webkit-scrollbar {
+	background: var(--clr-black);
+}
+
+body::-webkit-scrollbar-thumb {
+	background: var(--clr-grey);
+	border-radius: var(--space-2xs);
+}
