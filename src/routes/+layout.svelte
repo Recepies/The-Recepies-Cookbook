@@ -1,5 +1,4 @@
-
-<svelte:head><title>Recepies - Food Recipes</title></svelte:head>
+<svelte:head><title>Recepies - Quick and Easy Food Recipes</title></svelte:head>
 
 <script>
 	import './styles.css';

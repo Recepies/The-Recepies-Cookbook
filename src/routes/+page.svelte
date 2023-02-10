@@ -1,3 +1,5 @@
+<svelte:head><title>Recepies - Quick and Easy Food Recipes</title></svelte:head>
+
 <header>
 	<div class="blob-a" />
 	<div class="blob-b" />
