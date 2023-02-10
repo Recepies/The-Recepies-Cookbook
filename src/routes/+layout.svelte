@@ -1,3 +1,6 @@
+
+<svelte:head><title>Recepies - Food Recipes</title></svelte:head>
+
 <script>
 	import './styles.css';
 </script>
