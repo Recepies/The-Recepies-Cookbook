@@ -1,4 +1,6 @@
-<svelte:head><title>Recepies - Quick and Easy Food Recipes</title></svelte:head>
+<svelte:head><title>Recepies - Quick and Easy Food Recipes</title>
+<meta name="google-site-verification" content="ZcIo3v7EMp7-MhgoUS3MgWmGF3x0Qa8H2riYZBLNCSE" />
+</svelte:head>
 
 <header>
 	<div class="blob-a" />
