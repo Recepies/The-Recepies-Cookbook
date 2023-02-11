@@ -70,7 +70,7 @@
 
 	footer {
 		width: calc(100% - var(--space-s) * 2);
-		background: var(--clr-black);
+		background: var(--clr-grey);
 		color: var(--clr-white);
 		bottom: 0;
 		padding: var(--space-s);

@@ -1,5 +1,6 @@
-<svelte:head><title>Recepies - Quick and Easy Food Recipes</title>
-<meta name="google-site-verification" content="ZcIo3v7EMp7-MhgoUS3MgWmGF3x0Qa8H2riYZBLNCSE" />
+<svelte:head
+	><title>Recepies - Quick and Easy Food Recipes</title>
+	<meta name="google-site-verification" content="ZcIo3v7EMp7-MhgoUS3MgWmGF3x0Qa8H2riYZBLNCSE" />
 </svelte:head>
 
 <header>
@@ -40,6 +41,13 @@
 		opacity: 0.8;
 		filter: blur(75px);
 		border-radius: 980px;
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.blob-a,
+		.blob-b {
+			opacity: 40%;
+		}
 	}
 
 	img {

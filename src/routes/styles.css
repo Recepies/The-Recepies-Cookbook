@@ -119,6 +119,14 @@ body {
 	--LinuxLibertine: 'Linux Libertine', serif;
 }
 
+@media (prefers-color-scheme: dark) {
+	:root {
+		--clr-white: #262626;
+		--clr-black: #e6e6e6;
+		--clr-grey: #b8b8b8;
+	}
+}
+
 body {
 	background: var(--clr-white);
 	color: var(--clr-black);
@@ -179,4 +187,3 @@ body::-webkit-scrollbar-thumb {
 	background: var(--clr-grey);
 	border-radius: var(--space-2xs);
 }
-

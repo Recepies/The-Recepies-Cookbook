@@ -12,6 +12,12 @@
 		);
 	});
 
+	const resetsearch = () => {
+		console.log('search was reset');
+
+		searchedTerm = '';
+	};
+
 	$: console.log(filteredrecipes);
 </script>
 
@@ -21,6 +27,12 @@
 <input type="text" bind:value={searchedTerm} placeholder="Search" />
 
 <section class="card-holder">
+	{#if filteredrecipes.length === 0}
+		<div>
+			<p>No Results Found! Check out some other Recipes!</p>
+			<button><a href="/recipes/0">Check out {data.recipes[0].title}</a></button>
+		</div>
+	{/if}
 	{#each filteredrecipes as item}
 		<article class="card">
 			<h2 class="card__title">{item.title}</h2>
@@ -56,6 +68,12 @@
 		}
 	}
 
+	@media only screen and (max-width: 500px) {
+		section {
+			grid-template-columns: repeat(1, 1fr);
+		}
+	}
+
 	article {
 		background: var(--clr-black);
 		color: var(--clr-white);
@@ -69,8 +87,8 @@
 	}
 
 	footer {
-		width: calc(100% - var(--space-s) * 2);
-		background: var(--clr-black);
+		width: 100%;
+		background: var(--clr-grey);
 		color: var(--clr-white);
 		bottom: 0;
 		padding: var(--space-s);
