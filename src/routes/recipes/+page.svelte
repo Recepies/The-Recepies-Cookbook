@@ -69,7 +69,6 @@
 	}
 
 	footer {
-		position: fixed;
 		width: calc(100% - var(--space-s) * 2);
 		background: var(--clr-black);
 		color: var(--clr-white);
