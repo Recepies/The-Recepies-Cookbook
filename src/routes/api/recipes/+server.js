@@ -16,8 +16,8 @@ const text = [
 			'add eggs to flour and mix well',
 			'apply mixture on avacado pieces',
 			'Your meal is ready to server! Bon Appetit'
-		]
-		// cover: 'p2.png'
+		],
+		cover: 'eagle.png'
 	},
 	{
 		id: 2,

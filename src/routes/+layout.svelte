@@ -1,5 +1,3 @@
-<svelte:head><title>Recepies - Quick and Easy Food Recipes</title></svelte:head>
-
 <script>
 	import './styles.css';
 </script>
@@ -8,10 +6,7 @@
 	<ul>
 		<li><a href="/">Home</a></li>
 
-		<li class="logo">Recepies</li>
-
-
-		<li><a href="/recipes">Recipes</a></li>
+		<li class="logo"><a href="/recipes">Recepies</a></li>
 	</ul>
 </nav>
 <slot />
@@ -24,5 +19,9 @@
 
 	li:not(:last-child) {
 		width: 100%;
+	}
+
+	.logo {
+		font-weight: bold;
 	}
 </style>

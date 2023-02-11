@@ -15,6 +15,7 @@
 	$: console.log(filteredrecipes);
 </script>
 
+<svelte:head><title>Recepies - Quick and Easy Food Recipes</title></svelte:head>
 <h1>recipes</h1>
 
 <input type="text" bind:value={searchedTerm} placeholder="Search" />
@@ -30,6 +31,11 @@
 		</article>
 	{/each}
 </section>
+
+<footer>
+	<h2>Contact</h2>
+	<p>recepies.work@gmail.com</p>
+</footer>
 
 <style>
 	h1,
@@ -60,5 +66,16 @@
 	button {
 		color: var(--clr-white);
 		background: var(--clr-grey);
+	}
+
+	footer {
+		position: fixed;
+		width: calc(100% - var(--space-s) * 2);
+		background: var(--clr-black);
+		color: var(--clr-white);
+		bottom: 0;
+		padding: var(--space-s);
+		margin-block: var(--space-s);
+		border-radius: var(--space-xs);
 	}
 </style>

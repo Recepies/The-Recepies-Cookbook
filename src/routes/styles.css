@@ -172,9 +172,11 @@ input {
 
 body::-webkit-scrollbar {
 	background: var(--clr-black);
+	width: var(--space-2xs);
 }
 
 body::-webkit-scrollbar-thumb {
 	background: var(--clr-grey);
 	border-radius: var(--space-2xs);
 }
+

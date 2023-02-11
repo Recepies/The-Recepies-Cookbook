@@ -9,7 +9,7 @@
 	<button><a href="/recipes">View Recepies</a></button>
 </header>
 
-<figure><img src="/p1.png" alt="" /></figure>
+<figure><img src="/cover.png" alt="" /></figure>
 
 <style>
 	.blob-a {

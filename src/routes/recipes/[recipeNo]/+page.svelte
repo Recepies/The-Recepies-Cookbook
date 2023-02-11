@@ -6,6 +6,8 @@
 	const recipe = data.recipes;
 </script>
 
+<svelte:head><title>Recepies - {recipe.title}</title></svelte:head>
+
 <main>
 	{#if recipe.cover}
 		<figure><img src="/recipes/{recipe.cover}" alt /></figure>
@@ -39,13 +41,18 @@
 	</article>
 </main>
 
+<footer>
+	<h2>Contact</h2>
+	<p>recepies.work@gmail.com</p>
+</footer>
+
 <style>
 	h2 {
 		margin-block: var(--space-xs) var(--space-2xs);
 	}
 
 	figure {
-		margin-bottom: var(--space-m);
+		margin-block: var(--space-m);
 
 		width: 100%;
 	}
@@ -54,9 +61,20 @@
 		width: 100%;
 		max-height: 60vh;
 		object-fit: cover;
+		border-radius: var(--space-xs);
 	}
 
 	article {
 		margin-bottom: var(--space-l);
+	}
+
+	footer {
+		width: calc(100% - var(--space-s) * 2);
+		background: var(--clr-black);
+		color: var(--clr-white);
+		bottom: 0;
+		padding: var(--space-s);
+		margin-block: var(--space-s);
+		border-radius: var(--space-xs);
 	}
 </style>
