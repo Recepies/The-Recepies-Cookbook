@@ -34,7 +34,7 @@ const text = [
 	},
 	{
 		id: 2,
-		title: 'Madwadi Kadi',
+		title: 'Marwari Kadi',
 		desc: 'An Indian Classic also Popularly know as Rajasthani Kadi',
 		time: 15,
 		cat: 'Appetizer',
