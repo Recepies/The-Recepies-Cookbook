@@ -1,10 +1,41 @@
 @font-face {
-	font-family: 'Beth Ellen';
-	src: url('./fonts/Beth-Ellen-2.0.otf');
+	font-family: 'Naga';
+	src: url('./fonts/Naga/Naga.otf');
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: 'Public Sans';
+	src: url('./fonts/PublicSans/PublicSans-Regular.otf');
+	font-weight: normal;
 }
 @font-face {
-	font-family: 'Linux Libertine';
-	src: url('./fonts/LinLibertine_R.otf');
+	font-family: 'Public Sans';
+	src: url('./fonts/PublicSans/PublicSans-Italic.otf');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Public Sans';
+	src: url('./fonts/PublicSans/PublicSans-SemiBold.otf');
+	font-weight: bolder;
+}
+@font-face {
+	font-family: 'Public Sans';
+	src: url('./fonts/PublicSans/PublicSans-SemiBolditalic.otf');
+	font-weight: normal;
+	font-style: italic;
+}
+@font-face {
+	font-family: 'Public Sans';
+	src: url('./fonts/PublicSans/PublicSans-Bold.otf');
+	font-weight: bold;
+}
+@font-face {
+	font-family: 'Public Sans';
+	src: url('./fonts/PublicSans/PublicSans-Bolditalic.otf');
+	font-weight: bold;
+	font-style: italic;
 }
 
 /* Box-Sizing Rule */
@@ -97,15 +128,9 @@ body {
 }
 
 :root {
-	--clr-white: #e6e6e6;
-	--clr-black: #262626;
-	--clr-grey: #464646;
-
-	--fz-xs: clamp(1rem, calc(0.87rem + 0.65vw), 1.38rem);
-	--fz-s: clamp(1.2rem, calc(1.02rem + 0.9vw), 1.72rem);
-	--fz-m: clamp(1.44rem, calc(1.19rem + 1.23vw), 2.15rem);
-	--fz-l: clamp(1.73rem, calc(1.4rem + 1.67vw), 2.69rem);
-	--fz-xl: clamp(2.07rem, calc(1.63rem + 2.23vw), 3.36rem);
+	--fz-title: clamp(2.75rem, calc(2.05rem + 3.46vw), 4.74rem);
+	--fz-subtitle: clamp(2.2rem, calc(1.73rem + 2.36vw), 3.55rem);
+	--fz-body: clamp(1.13rem, calc(0.99rem + 0.65vw), 1.5rem);
 
 	--space-2xs: clamp(0.25rem, calc(0.21rem + 0.22vw), 0.38rem);
 	--space-xs: clamp(0.75rem, calc(0.64rem + 0.54vw), 1.06rem);
@@ -115,75 +140,110 @@ body {
 	--space-xl: clamp(3.75rem, calc(3.23rem + 2.61vw), 5.25rem);
 	--space-2xl: clamp(5rem, calc(4.3rem + 3.48vw), 7rem);
 
-	--BethEllen: 'Beth Ellen', serif;
-	--LinuxLibertine: 'Linux Libertine', serif;
+	--clr-text-bl: 0, 0%, 20%;
+	--clr-bg: 43, 42%, 77%;
+	--clr-green: 98, 53%, 23%;
+	--clr-saffron: 18, 54%, 36%;
+	--clr-text-wh: 0, 0%, 89%;
+	--clr-bg-dark: 42, 26%, 62%;
+
+	--ff-sans: 'Public Sans', serif;
+	--ff-serif: 'Naga', serif;
 }
 
-@media (prefers-color-scheme: dark) {
-	:root {
-		--clr-white: #262626;
-		--clr-black: #e6e6e6;
-		--clr-grey: #b8b8b8;
-	}
+html {
+	padding: 0;
+	margin: 0;
 }
 
 body {
-	background: var(--clr-white);
-	color: var(--clr-black);
-	padding: var(--space-s);
-}
-
-* {
-	font-family: var(--LinuxLibertine);
+	background: hsl(var(--clr-bg));
+	font-family: var(--ff-serif);
+	font-size: var(--fz-body);
 }
 
 h1,
 h2,
 h3 {
-	font-family: var(--BethEllen);
+	font-family: var(--ff-sans);
 }
 
 h1 {
-	font-size: var(--fz-xl);
-	max-width: 50rem;
+	font-size: var(--fz-title);
+	line-height: var(--fz-title);
+
+	margin-block: var(--space-m);
+}
+h2 {
+	font-size: var(--fz-subtitle);
 }
 
-button {
-	padding: var(--space-2xs) var(--space-s);
-	margin-block: var(--space-xs);
-	background: var(--clr-black);
-	color: var(--clr-white);
-
-	border-radius: var(--space-2xs);
-	border: 0;
-
-	font-size: var(--fz-xs);
-}
-
-a {
+a:not(nav a) {
+	background: hsl(var(--clr-saffron));
+	color: hsl(var(--clr-text-wh));
 	text-decoration: none;
+	padding: var(--space-xs) var(--space-s);
+	border-radius: var(--space-2xs);
+}
+
+a:focus {
+	outline: none;
+	border: none;
+}
+
+main {
+	padding: var(--space-m) var(--space-xs);
+}
+
+.card {
+	background: hsl(var(--clr-bg-dark));
+	padding: var(--space-s) var(--space-xs);
+	border-radius: var(--space-2xs);
+}
+
+.card__img {
+	aspect-ratio: 2/1;
+	object-fit: cover;
+	max-height: 25%;
+	border-radius: var(--space-2xs);
+}
+
+.card__desc {
+	margin-block: var(--space-xs);
+}
+
+.card__link img {
+	position: relative;
+	width: var(--fz-body);
+	aspect-ratio: 1/1;
+	display: inline;
+}
+
+.card__info:last-of-type {
+	margin-block-end: var(--space-s);
 }
 
 input {
-	padding: var(--space-2xs) var(--space-s);
-	margin-block: var(--space-xs);
-	background: var(--clr-grey);
-	color: var(--clr-white);
-	border-radius: var(--space-2xs);
-	font-size: var(--fz-xs);
-
-	outline: none;
 	border: none;
-
-	width: 100%;
-}
-
-body::-webkit-scrollbar {
-	background: var(--clr-black);
-	width: var(--space-2xs);
-}
-
-body::-webkit-scrollbar-thumb {
-	background: var(--clr-grey);
+	outline: none;
+	padding: var(--space-2xs) var(--space-xs);
+	background: hsl(var(--clr-saffron));
+	color: hsl(var(--clr-text-wh));
 	border-radius: var(--space-2xs);
+	margin-block-end: var(--space-s);
+
+	font-family: var(--ff-sans);
+	font-weight: normal;
+}
+
+input::placeholder {
+	color: hsla(var(--clr-text-wh), 0.4);
+}
+
+::-webkit-scrollbar {
+	background: hsl(var(--clr-bg-dark));
+}
+
+::-webkit-scrollbar-thumb {
+	background: hsla(var(--clr-text-bl), 0.25);
 }

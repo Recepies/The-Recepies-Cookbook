@@ -14,10 +14,9 @@
 	{/if}
 
 	<h1>{recipe.title}</h1>
+	<p>{recipe.desc}</p>
+	<br />
 	<article>
-		<h2>About this Recipe</h2>
-		<p>{recipe.desc}</p>
-		<br />
 		<p>Time Required: {recipe.time} min</p>
 		<p>Category: {recipe.cat}</p>
 	</article>
@@ -35,16 +34,12 @@
 		<h2>Procedure</h2>
 		<ol>
 			{#each recipe.procedure as step}
-				<li>{step}</li>
+				<li># {step}</li>
+				<br />
 			{/each}
 		</ol>
 	</article>
 </main>
-
-<footer>
-	<h2>Contact</h2>
-	<p>recepies.work@gmail.com</p>
-</footer>
 
 <style>
 	h2 {

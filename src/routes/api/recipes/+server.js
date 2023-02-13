@@ -8,7 +8,7 @@ const text = [
 		title: 'Stuffed Okra',
 		desc: 'Okra stuffed with Spices		',
 		time: 20,
-		cat: 'vegetable, spicy',
+		cat: 'Vegetable',
 		ingredients: [
 			'15 Okras',
 			'2 tbs Corriander Powder',
@@ -35,15 +35,15 @@ const text = [
 	{
 		id: 2,
 		title: 'Madwadi Kadi',
-		desc: ' ',
+		desc: 'An Indian Classic also Popularly know as Rajasthani Kadi',
 		time: 15,
-		cat: 'indian',
+		cat: 'Appetizer',
 		ingredients: [
 			'1 bowl of curd',
-			'1 tbs gram flour (besan)',
+			'1 tbs gram flour (besan) ',
 			'1-2 green chilli slitted',
 			'1/2 inch ginger',
-			'1/2 tbs fenugreek seeds(methi)',
+			'1/2 tbs fenugreek seeds (methi)',
 			'1/2 tbs mustard seeds',
 			'1/2 tbs cumin seeds (jeera)',
 			'pinch of turmeric powder',
